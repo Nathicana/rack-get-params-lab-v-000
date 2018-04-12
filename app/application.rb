@@ -21,7 +21,7 @@ class Application
     resp.write check_item(item)
 
 
-    elsif req.path.match(/search/)
+  else req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
 
