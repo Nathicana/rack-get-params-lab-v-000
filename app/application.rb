@@ -8,8 +8,8 @@ class Application
     @@items.each do |item|
       resp.write "#{item}\n"
     end
-  end
-  elsif req.path.match(/cart/)
+  
+  else req.path.match(/cart/)
     if @@cart.empty?
       resp.write "Your cart is empty"
     else
