@@ -1,8 +1,8 @@
 class Application
- 	 
+
    @@items = ["Apples","Carrots","Pears"]	   @@items = ["Apples","Carrots","Pears"]
   @@cart = []
- 	 
+
    def call(env)	   def call(env)
      resp = Rack::Response.new	     resp = Rack::Response.new
 @@ -13,6 +14,22 @@ def call(env)
@@ -19,7 +19,7 @@ class Application
       end
     elsif req.path.match(/add/)
       item_to_add = req.params["item"]
-      if @@items.include? item_to_add 
+      if @@items.include? item_to_add
         @@cart << item_to_add
         resp.write "added #{item_to_add}"
       else
