@@ -10,10 +10,10 @@ class Application
     end
   elsif req.path.match(/cart/)
     if @@cart.empty?
-      resp.write "Ypur cart is empty"
+      resp.write "Your cart is empty"
     else
       @@cart.each do |item|
-        resp.write "#{{item}\n"
+        resp.write "#{item}\n"
       end
     end
   elsif req.path.match(/add/)
