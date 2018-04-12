@@ -17,7 +17,7 @@ class Application
         resp.write "#{item}\n"
       end
     end
-  else req.path.match(/add/)
+  elsif req.path.match(/add/)
     item = req.params["item"]
     resp.write check_item(item)
 
